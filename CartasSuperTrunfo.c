@@ -7,16 +7,81 @@
 //Teste larissa
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    //RESERVANDO AS VARIAVEIS
+    char estado, estado2;
+    char codigo[3] = "01", codigo2[3] = "02";
+    char cidade[15], cidade2[15];
+    int populacao, populacao2;
+    float area, area2;
+    float pib, pib2;
+    int npt, npt2;  //VARIAVEL NUMERO DE PONTOS TURISTICOS
+
+
+
+printf("Informe o Estado.\n");
+scanf("%c", &estado);
+
+printf("Informe a Cidade.\n");
+scanf("%s", &cidade);
+
+printf("Informe a populacao.\n");
+scanf("%d", &populacao);
+
+printf("Informe a area.\n");
+scanf("%f", &area);
+
+printf("Informe o pib.\n");
+scanf("%f", &pib);
+
+printf("Informe o numero de pontos turisticos.\n");
+scanf("%d", &npt);
+
+
+//INFORMAÇÕES DA SEGUNDA CARTA
+
+
+printf("Informe o Estado da segunda carta.\n");
+    scanf("%c", &estado2);
+
+    printf("Informe a Cidade da segunda carta.\n");
+    scanf("%s", &cidade2);
+
+    printf("Informe a populacao da segunda carta.\n");
+    scanf("%i", &populacao2);
+
+    printf("Informe a area da segunda carta.\n");
+    scanf("%f", &area2);
+
+    printf("Informe o pib da segunda carta.\n");
+    scanf("%f", &pib2);
+
+    printf("Informe o numero de pontos turisticos da segunda carta.\n");
+    scanf("%i", &npt2);
+
+
+    //IMPRIME AS CARTAS NA TELA
+
+
+printf("\nCarta 1:\n");
+    printf("Estado: %c\n", estado);
+    printf("Codigo: %c%s\n", estado, codigo);
+    printf("Cidade: %s\n", cidade);
+    printf("Populacao: %i\n", populacao);
+    printf("Area: %f\n", area);
+    printf("PIB: %f\n", pib);
+    printf("Pontos Turisticos: %i\n", npt);
+
+    printf("\nCarta 2:\n");
+    printf("Estado: %c\n", estado2);
+    printf("Codigo: %c%s\n", estado2, codigo2);
+    printf("Cidade: %s\n", cidade2);
+    printf("Populacao: %i\n", populacao2);
+    printf("Area: %f\n", area2);
+    printf("PIB: %f\n", pib2);
+    printf("Pontos Turisticos: %i\n", npt2);
+
+
 
     return 0;
 }
