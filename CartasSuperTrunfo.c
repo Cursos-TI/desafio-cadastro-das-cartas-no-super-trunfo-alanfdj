@@ -16,7 +16,8 @@ int main() {
     float area, area2;
     float pib, pib2;
     int npt, npt2;  //VARIAVEL NUMERO DE PONTOS TURISTICOS
-
+    float densidade, densidade2;
+    float percapta, percapta2;
 
 
 printf("Informe o Estado.\n");
@@ -59,6 +60,11 @@ printf("Informe o Estado da segunda carta.\n");
     printf("Informe o numero de pontos turisticos da segunda carta.\n");
     scanf("%i", &npt2);
 
+    // CALCULANDO DENSIDADE POPULACIONAL E PIB PERCAPTA
+    densidade = (float) populacao / area;
+    densidade2 = (float) populacao2 / area2
+    percapta = (float) pib / populacao;
+    percapta2 = (float) pib2 / populacao2;
 
     //IMPRIME AS CARTAS NA TELA
 
@@ -71,6 +77,8 @@ printf("\nCarta 1:\n");
     printf("Area: %f\n", area);
     printf("PIB: %f\n", pib);
     printf("Pontos Turisticos: %i\n", npt);
+    printf("Densidade populacional: %.2f\n", densidade);
+    printf("PIB percapta: %.2f\n", percapta);
 
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
@@ -80,8 +88,8 @@ printf("\nCarta 1:\n");
     printf("Area: %f\n", area2);
     printf("PIB: %f\n", pib2);
     printf("Pontos Turisticos: %i\n", npt2);
-
-
+    printf("Densidade populacional: %.2f\n", densidade2);
+    printf("PIB percapta: %.2f\n", percapta2);
 
     return 0;
 }
