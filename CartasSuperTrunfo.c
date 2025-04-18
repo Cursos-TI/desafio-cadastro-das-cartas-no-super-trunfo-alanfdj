@@ -8,11 +8,12 @@
 
 int main() {
     
+    
     //RESERVANDO AS VARIAVEIS
     char estado, estado2;
     char codigo[3] = "01", codigo2[3] = "02";
     char cidade[15], cidade2[15];
-    int populacao, populacao2;
+    unsigned long int populacao, populacao2;
     float area, area2;
     float pib, pib2;
     int npt, npt2;  //VARIAVEL NUMERO DE PONTOS TURISTICOS
@@ -62,9 +63,16 @@ printf("Informe o Estado da segunda carta.\n");
 
     // CALCULANDO DENSIDADE POPULACIONAL E PIB PERCAPTA
     densidade = (float) populacao / area;
-    densidade2 = (float) populacao2 / area2
+    densidade2 = (float) populacao2 / area2;
     percapta = (float) pib / populacao;
     percapta2 = (float) pib2 / populacao2;
+
+    //CALCULANDO SUPER PODER
+   float superpoder;
+   float superpoder2;
+   superpoder = (float) populacao + area + pib + percapta + npt;
+   superpoder2 = (float) populacao2 + area2 + pib2 + percapta2 + npt2;
+
 
     //IMPRIME AS CARTAS NA TELA
 
@@ -91,5 +99,20 @@ printf("\nCarta 1:\n");
     printf("Densidade populacional: %.2f\n", densidade2);
     printf("PIB percapta: %.2f\n", percapta2);
 
+
+   
+   //COMPARANDO AS CARTAS
+ printf("Comparacao de Cartas\n\n");
+ printf("Populacao : Carta 1 Venceu %d\n", populacao > popolacao2);
+ printf("Area : Carta 1 Venceu %d\n", area > area2);
+ printf("PIB : Carta 1 Venceu %d\n", pib > pib2);
+ printf("Pontos Turisticos : Carta 1 Venceu %d\n", npt > npt2);
+ printf("Densidade populacional : Carta 1 Venceu %d\n", densidade < densidade2);
+ printf("PIB per capta : Carta 1 Venceu %d\n", percapta > percapta2);
+ printf("Super Poder : Carta 1 Venceu %d\n", superpoder > superpoder22);
+
+
     return 0;
+
+    
 }
