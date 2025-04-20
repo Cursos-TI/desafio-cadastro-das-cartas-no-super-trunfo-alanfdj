@@ -75,9 +75,7 @@ printf("Informe o Estado da segunda carta.\n");
 
 
     //IMPRIME AS CARTAS NA TELA
-
-
-printf("\nCarta 1:\n");
+    printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado);
     printf("Codigo: %c%s\n", estado, codigo);
     printf("Cidade: %s\n", cidade);
@@ -114,7 +112,7 @@ printf("\nCarta 1:\n");
  printf("Super Poder : Carta 1 Venceu %d\n", superpoder > superpoder22);*/
 
 
-//COMPARANDO AS CARTAS COM IF ELSE
+/*COMPARANDO AS CARTAS COM IF ELSE
 printf("Comparacao de cartas - Atributo : Populacao\n\n");  
 if(populacao > populacao2){
   printf("Carta 1 - %s%d\n", cidade, populacao);
@@ -185,7 +183,195 @@ else{
   printf("Carta 1 - %s%f\n", cidade, percapta);
   printf("Carta 2 - %s%f\n", cidade2, percapta2);
   printf("Resultado: Carta 2 - %s venceu\n", cidade2);
+}*/
+
+
+
+
+//****************************************************************************
+//INICIANDO O JOGO E COMPARANDO AS CARTAS POR ATRIBUTOS
+printf("    1 - Iniciar Jogo\n");
+    printf("    2 - Sair do jogo\n\n");
+    scanf("%d", &menuprincipal);
+
+    if(menuprincipal == 1){
+
+        //MENU DE ESCOLHA DE ATRIBUTO
+        printf("\nQUAL ATRIBUTO DESEJA COMPARAR ?\n\n");
+        printf("1 - Populacao\n");
+        printf("2 - Area\n");
+        printf("3 - PIB\n");
+        printf("4 - Pontos Turisticos\n");
+        printf("5 - Densidade Demografica\n\n");
+
+        scanf("%d", &comparaatributo);
+
+        
+        // COMPARACAO DOS ATRIBUTOS
+        switch (comparaatributo)
+        {
+        case 1:  //ATRIBUTO POPULACAO
+
+            printf("\n Carta 1");
+            printf("\n Estado : %s ", &estado);
+            printf("\n Populacao : %i\n", &populacao);
+
+            printf("\n Carta 2");
+            printf("\n Estado: %s", &estado2);
+            printf("\n Populacao : %i\n\n", &populacao2);
+
+            if(populacao > populacao2){
+
+                printf(" CARTA 1 VENCEU\n");
+
+            }else if(populacao == populacao2){
+
+                printf(" EMPATE\n");
+
+            }else{
+
+                printf(" CARTA 2 VENCEU\n");   
+                
+            }
+
+            break;
+
+        
+        case 2 : //ATRIBUTO AREA
+           
+        printf("\n Carta 1");
+        printf("\n Estado : %s ", &estado);
+        printf("\n Area : %f\n", &area);
+
+        printf("\n Carta 2");
+        printf("\n Estado: %s", &estado2);
+        printf("\n Area : %f\n\n", &area2);
+
+        if(area > area2){
+
+            printf(" CARTA 1 VENCEU\n");
+
+        }else if(area == area2){
+
+            printf(" EMPATE\n");
+
+        }else{
+
+            printf(" CARTA 2 VENCEU\n");   
+            
+        }
+
+
+            break;
+
+
+        case 3 : //ATRIBUTO PIB
+        
+        
+        printf("\n Carta 1");
+        printf("\n Estado : %s ", &estado);
+        printf("\n PIB : %f\n", &pib);
+
+        printf("\n Carta 2");
+        printf("\n Estado: %s", &estado2);
+        printf("\n PIB : %f\n\n", &pib2);
+
+        if(pib > pib2){
+
+            printf(" CARTA 1 VENCEU\n");
+
+        }else if(pib == pib2){
+
+            printf(" EMPATE\n");
+
+        }else{
+
+            printf(" CARTA 2 VENCEU\n");   
+            
+        }
+
+
+            break;
+
+
+        case 4 : //ATRIBUTO NUMERO DE PONTOS TURISTICOS
+
+
+        printf("\n Carta 1");
+        printf("\n Estado : %s ", &estado);
+        printf("\n Pontos Turisticos : %i\n", &npt);
+
+        printf("\n Carta 2");
+        printf("\n Estado: %s", &estado2);
+        printf("\n Pontos Turisticos : %i\n\n", &npt2);
+
+        if(npt > npt2){
+
+            printf(" CARTA 1 VENCEU\n");
+
+        }else if(npt == npt2){
+
+            printf(" EMPATE\n");
+
+        }else{
+
+            printf(" CARTA 2 VENCEU\n");   
+            
+        }
+
+            break;
+
+
+        case 5 : //ATRIBUTO DENSIDADE DEMOGRAFICA
+
+
+        printf("\n Carta 1");
+        printf("\n Estado : %s ", &estado);
+        printf("\n Densidade Demografica : %2.f\n", &densidade);
+
+        printf("\n Carta 2");
+        printf("\n Estado: %s", &estado2);
+        printf("\n Densidade Demografica : %2.f\n\n", &densidade2);
+
+        if(npt < npt2){
+
+            printf(" CARTA 1 VENCEU\n");
+
+        }else if(npt == npt2){
+
+            printf(" EMPATE\n");
+
+        }else{
+
+            printf(" CARTA 2 VENCEU\n");   
+            
+        }
+
+
+            break;
+
+
+
+
+        default:
+            break;
+        }
+
+
+
+
+    }else{
+
+        printf("Opcao Invalida\n");
+
+    }
+
+
+    return 0;
+
+
 }
+
 
 
 
