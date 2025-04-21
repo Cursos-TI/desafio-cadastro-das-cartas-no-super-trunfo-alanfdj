@@ -19,8 +19,12 @@ int main() {
     int npt, npt2;  //VARIAVEL NUMERO DE PONTOS TURISTICOS
     float densidade, densidade2;
     float percapta, percapta2;
+    int menuprincipal;
+    int comparaatributo;
 
 
+
+// CADASTRO DA CARTA 1    
 printf("Informe o Estado.\n");
 scanf("%c", &estado);
 
@@ -40,9 +44,7 @@ printf("Informe o numero de pontos turisticos.\n");
 scanf("%d", &npt);
 
 
-//INFORMAÇÕES DA SEGUNDA CARTA
-
-
+//CADASTRO DA CARTA 2
 printf("Informe o Estado da segunda carta.\n");
     scanf("%c", &estado2);
 
